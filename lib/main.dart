@@ -32,35 +32,50 @@ class MyApp extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                children: [
-                  CircleAvatar(
-                    // Use your profile picture link here
-                    backgroundImage: NetworkImage(''),
-                    radius: 30,
-                  ),
-                  SizedBox(height: 4),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.person),
-                      Text('Followers: 100'),
-                    ],
-                  ),
-                  SizedBox(height: 8),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Mengikuti'),
-                  ),
-                  SizedBox(height: 8),
-                  IconButton(
-                    icon: Icon(Icons.share),
-                    onPressed: () {},
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      // Use your profile picture link here
+                      backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWyCi8ymJIw7gwlFmmrLBIRFrqb-HwZvGgQQ&usqp=CAU'),
+                      radius: 30,
+                    ),
+                    SizedBox(width: 16),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Godrej',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        Row(
+                          children: [
+                            Icon(Icons.person),
+                            Text('100 Pengikut'),
+                          ],
+                        ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.blue,
+                          ),
+                          child: Text('Mengikuti'),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    IconButton(
+                      icon: Icon(Icons.share),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
               ),
+
               // Carousel widget for promotions
               // Add your carousel widget here
 
@@ -116,9 +131,9 @@ class MyApp extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ProductItem(
-                      imageUrl: 'https://th.bing.com/th?id=OIP.GGIm4d6eIAwnKuCYpjfbFQAAAA&w=213&h=282&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
-                      name: "Stella Parfum'ist",
-                      price: "Rp 30.000",
+                      imageUrl: 'https://th.bing.com/th/id/OIP.7gWRcTtEboTUh2SANAxe3AHaHa?w=204&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+                      name: "Minyak Kayu Putih Cap Lang 60 Ml",
+                      price: "Rp 20.000",
                     ),
                   ),
                   Expanded(
@@ -146,6 +161,26 @@ class MyApp extends StatelessWidget {
                       imageUrl: 'https://th.bing.com/th/id/OIP.vieD07wofR3Cdp6SGlhAYAAAAA?w=144&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7',
                       name: 'Stella Car Perfume Musk Yellow',
                       price: 'Rp. 41.500',
+                    ),
+                  ),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Expanded(
+                    child: ProductItem(
+                      imageUrl: 'https://th.bing.com/th/id/OIP.1a47s2GljovuLlRvKNDRxwHaJ4?w=149&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+                      name: "Kopi Kapal Api 10 Pcs",
+                      price: "Rp 15.000",
+                    ),
+                  ),
+                  Expanded(
+                    child: ProductItem(
+                      imageUrl: 'https://th.bing.com/th/id/OIP.GpJ0tZiLpBhF86VSmd-uGQHaHa?pid=ImgDet&rs=1',
+                      name: 'Chitato 68g Sapi Bakar',
+                      price: 'Rp. 23.500',
                     ),
                   ),
                 ],
