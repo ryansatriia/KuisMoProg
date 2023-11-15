@@ -117,35 +117,45 @@ class MyApp extends StatelessWidget {
                   CategoryButton(imageUrl: 'https://th.bing.com/th?id=OIP.NXTeH43C6DaOWt9cO5uiqwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'),
                 ],
               ),
-
               Padding(
-                padding: const EdgeInsets.all(16.0),
+  padding: const EdgeInsets.all(16.0),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        'Semua Produk',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      ),
+      SizedBox(height: 8),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          TextButton(
+            onPressed: () {},
+            child: Text('Promosi'),
+          ),
+          Row(
+            children: [
+              TextButton(
+                onPressed: () {},
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Semua Produk',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    Row(
-                      children: [
-                        TextButton(
-                          onPressed: () {},
-                          child: Text('Promosi'),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text('Nama Produk'),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text('Terlaris'),
-                        ),
-                      ],
-                    ),
+                    Text('Nama Produk'),
+                    Icon(Icons.arrow_drop_up_sharp),
                   ],
                 ),
               ),
+            ],
+          ),
+          TextButton(
+            onPressed: () {},
+            child: Text('Terlaris'),
+          ),
+        ],
+      ),
+    ],
+  ),
+),
               // Product grid
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -278,6 +288,10 @@ class ProductItem extends StatelessWidget {
           Text(
             price,
             textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: const Color.fromARGB(255, 142, 33, 25),
+            ),
           ),
           ElevatedButton(
             onPressed: () {},
