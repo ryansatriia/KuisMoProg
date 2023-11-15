@@ -41,7 +41,6 @@ class MyApp extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CircleAvatar(
-                      // Use your profile picture link here
                       backgroundImage: NetworkImage(
                           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWyCi8ymJIw7gwlFmmrLBIRFrqb-HwZvGgQQ&usqp=CAU'),
                       radius: 30,
@@ -78,7 +77,6 @@ class MyApp extends StatelessWidget {
                 ),
               ),
 
-              // Carousel widget for promotions
               CarouselSlider(
                 items: [
                   Image.network(
@@ -86,7 +84,7 @@ class MyApp extends StatelessWidget {
                     fit: BoxFit.cover,
                     width: double.infinity,
                   ),
-                  // Add more images to the carousel if needed
+
                 ],
                 options: CarouselOptions(
                   height: 180,
@@ -107,7 +105,7 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
-              // Row of 4 buttons with images for categories
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -156,7 +154,7 @@ class MyApp extends StatelessWidget {
     ],
   ),
 ),
-              // Product grid
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -216,7 +214,6 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              // Add a loading indicator or button to load more products
             ],
           ),
         ),
@@ -290,7 +287,7 @@ class ProductItem extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: const Color.fromARGB(255, 142, 33, 25),
+              color: Color.fromARGB(255, 158, 28, 16),
             ),
           ),
           ElevatedButton(
