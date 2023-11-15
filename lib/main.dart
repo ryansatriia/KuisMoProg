@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(MyApp());
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       // Use your profile picture link here
-                      backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWyCi8ymJIw7gwlFmmrLBIRFrqb-HwZvGgQQ&usqp=CAU'),
+                      backgroundImage: NetworkImage(
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWyCi8ymJIw7gwlFmmrLBIRFrqb-HwZvGgQQ&usqp=CAU'),
                       radius: 30,
                     ),
                     SizedBox(width: 16),
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
                         Row(
                           children: [
                             Icon(Icons.person),
-                            Text('100 Pengikut'),
+                            Text('5.441 Pengikut'),
                           ],
                         ),
                         ElevatedButton(
@@ -77,7 +79,26 @@ class MyApp extends StatelessWidget {
               ),
 
               // Carousel widget for promotions
-              // Add your carousel widget here
+              CarouselSlider(
+                items: [
+                  Image.network(
+                    'https://th.bing.com/th/id/OIP.K0c8B-NBI9Ufqedwgn77ewHaD4?w=306&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                  ),
+                  // Add more images to the carousel if needed
+                ],
+                options: CarouselOptions(
+                  height: 180,
+                  enlargeCenterPage: true,
+                  autoPlay: true,
+                  aspectRatio: 16 / 9,
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enableInfiniteScroll: true,
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  viewportFraction: 0.8,
+                ),
+              ),
 
               Padding(
                 padding: const EdgeInsets.all(16.0),
