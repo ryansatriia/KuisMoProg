@@ -287,7 +287,7 @@ class ProductItem extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 170, 39, 27),
+              color: Color.fromARGB(255, 148, 34, 23),
             ),
           ),
           ElevatedButton(
