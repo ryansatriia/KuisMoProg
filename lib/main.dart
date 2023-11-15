@@ -114,15 +114,19 @@ class MyApp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  ProductItem(
-                    imageUrl: 'https://th.bing.com/th?id=OIP.GGIm4d6eIAwnKuCYpjfbFQAAAA&w=213&h=282&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
-                    name: "Stella Parfum'ist",
-                    price: "Rp 30.000",
+                  Expanded(
+                    child: ProductItem(
+                      imageUrl: 'https://th.bing.com/th?id=OIP.GGIm4d6eIAwnKuCYpjfbFQAAAA&w=213&h=282&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+                      name: "Stella Parfum'ist",
+                      price: "Rp 30.000",
+                    ),
                   ),
-                  ProductItem(
-                    imageUrl: 'https://th.bing.com/th/id/OIP.pPDG7MVf85kRiz0seYBLsAHaHa?w=210&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                    name: 'Stella Car Perfume Energyc Purple',
-                    price: 'Rp. 41.500',
+                  Expanded(
+                    child: ProductItem(
+                      imageUrl: 'https://th.bing.com/th/id/OIP.pPDG7MVf85kRiz0seYBLsAHaHa?w=210&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+                      name: 'Stella Car Perfume Energyc Purple',
+                      price: 'Rp. 41.500',
+                    ),
                   ),
                 ],
               ),
@@ -130,18 +134,23 @@ class MyApp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  ProductItem(
-                    imageUrl: 'https://th.bing.com/th/id/OIP.2juZxxl6--p0pcoon0qdxAHaHa?w=210&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                    name: 'Stella Car Perfume Shine Red',
-                    price: 'Rp. 41.500',
+                  Expanded(
+                    child: ProductItem(
+                      imageUrl: 'https://th.bing.com/th/id/OIP.2juZxxl6--p0pcoon0qdxAHaHa?w=210&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+                      name: 'Stella Car Perfume Shine Red',
+                      price: 'Rp. 41.500',
+                    ),
                   ),
-                  ProductItem(
-                    imageUrl: 'https://th.bing.com/th/id/OIP.vieD07wofR3Cdp6SGlhAYAAAAA?w=144&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                    name: 'Stella Car Perfume Musk Yellow',
-                    price: 'Rp. 41.500',
+                  Expanded(
+                    child: ProductItem(
+                      imageUrl: 'https://th.bing.com/th/id/OIP.vieD07wofR3Cdp6SGlhAYAAAAA?w=144&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+                      name: 'Stella Car Perfume Musk Yellow',
+                      price: 'Rp. 41.500',
+                    ),
                   ),
                 ],
               ),
+              // Add a loading indicator or button to load more products
             ],
           ),
         ),
@@ -190,7 +199,13 @@ class ProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(8),
+      padding: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(8.0),
+      ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.network(
             imageUrl,
@@ -199,9 +214,15 @@ class ProductItem extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           SizedBox(height: 4),
-          Text(name),
+          Text(
+            name,
+            textAlign: TextAlign.center,
+          ),
           SizedBox(height: 4),
-          Text(price),
+          Text(
+            price,
+            textAlign: TextAlign.center,
+          ),
           ElevatedButton(
             onPressed: () {},
             child: Text('+ Keranjang'),
