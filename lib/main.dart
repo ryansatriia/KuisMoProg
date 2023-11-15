@@ -139,7 +139,7 @@ class MyApp extends StatelessWidget {
                 child: Row(
                   children: [
                     Text('Nama Produk'),
-                    Icon(Icons.arrow_drop_up_sharp),
+                    Icon(Icons.arrow_drop_up),
                   ],
                 ),
               ),
@@ -287,7 +287,7 @@ class ProductItem extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 158, 28, 16),
+              color: Color.fromARGB(255, 170, 39, 27),
             ),
           ),
           ElevatedButton(
